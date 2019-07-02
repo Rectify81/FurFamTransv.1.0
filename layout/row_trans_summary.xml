@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rowCardViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rowLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/rowLogoID"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_detail_height_half"
+                android:src="@mipmap/logo_eversource_tight"
+                android:background="@color/colorReceived"
+                android:padding="2dp"/>
+
+            <LinearLayout
+                android:id="@+id/rowDetailsID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <LinearLayout
+                    android:id="@+id/rowPortionLayoutID"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/row_detail_height"
+                    android:layout_weight="1"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/rowPortionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_detail_first_row"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:text="@string/row_portion"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/rowDatePaidID"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_detail_second_row"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:text="@string/row_date"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowDetailsLayoutID"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/row_detail_height"
+                    android:layout_weight="3"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/rowTotalTextID"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_detail_first_row"
+                        android:gravity="center"
+                        android:text="@string/row_who_paid_what"
+                        android:autoSizeTextType="uniform"/>
+                    <TextView
+                        android:id="@+id/rowDiscountTextID"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/row_detail_second_row"
+                        android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:text="@string/row_discount_percent"
+                        android:textStyle="italic"
+                        android:visibility="visible"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rowTotalBalanceTextID"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_detail_height_half"
+                android:layout_marginTop="4dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:gravity="center_horizontal"
+                android:text="@string/row_total_balance_text"
+                android:autoSizeTextType="uniform" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>
